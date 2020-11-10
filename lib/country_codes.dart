@@ -1,6 +1,6 @@
 List<Map<String, String>> codes = [
   {
-    "name": "افغانستان",
+    "name": "Afghanistan",
     "code": "AF",
     "dial_code": "+93",
   },
@@ -15,7 +15,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+355",
   },
   {
-    "name": "الجزائر",
+    "name": "Algeria",
     "code": "DZ",
     "dial_code": "+213",
   },
@@ -85,7 +85,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+1242",
   },
   {
-    "name": "‏البحرين",
+    "name": "Bahrain",
     "code": "BH",
     "dial_code": "+973",
   },
@@ -100,7 +100,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+1246",
   },
   {
-    "name": "Белару́сь",
+    "name": "Belarus",
     "code": "BY",
     "dial_code": "+375",
   },
@@ -220,7 +220,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+56",
   },
   {
-    "name": "中国",
+    "name": "China",
     "code": "CN",
     "dial_code": "+86",
   },
@@ -315,7 +315,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+593",
   },
   {
-    "name": "مصر‎",
+    "name": "Egypt",
     "code": "EG",
     "dial_code": "+20",
   },
@@ -330,7 +330,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+240",
   },
   {
-    "name": "ኤርትራ",
+    "name": "Eritrea",
     "code": "ER",
     "dial_code": "+291",
   },
@@ -395,7 +395,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+220",
   },
   {
-    "name": "საქართველო",
+    "name": "Georgia",
     "code": "GE",
     "dial_code": "+995",
   },
@@ -415,7 +415,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+350",
   },
   {
-    "name": "Ελλάδα",
+    "name": "Greece",
     "code": "GR",
     "dial_code": "+30",
   },
@@ -485,7 +485,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+504",
   },
   {
-    "name": "香港",
+    "name": "Hong Kong",
     "code": "HK",
     "dial_code": "+852",
   },
@@ -500,7 +500,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+354",
   },
   {
-    "name": "भारत",
+    "name": "India",
     "code": "IN",
     "dial_code": "+91",
   },
@@ -510,12 +510,12 @@ List<Map<String, String>> codes = [
     "dial_code": "+62",
   },
   {
-    "name": "ایران",
+    "name": "Iran",
     "code": "IR",
     "dial_code": "+98",
   },
   {
-    "name": "العراق",
+    "name": "Iraq",
     "code": "IQ",
     "dial_code": "+964",
   },
@@ -530,7 +530,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+44",
   },
   {
-    "name": "ישראל",
+    "name": "Israel",
     "code": "IL",
     "dial_code": "+972",
   },
@@ -545,7 +545,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+1876",
   },
   {
-    "name": "日本",
+    "name": "Japan",
     "code": "JP",
     "dial_code": "+81",
   },
@@ -555,7 +555,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+44",
   },
   {
-    "name": "الأردن",
+    "name": "Jordan",
     "code": "JO",
     "dial_code": "+962",
   },
