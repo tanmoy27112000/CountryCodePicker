@@ -1040,7 +1040,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+500",
   },
   {
-    "name": "España",
+    "name": "Spain",
     "code": "ES",
     "dial_code": "+34",
   },
