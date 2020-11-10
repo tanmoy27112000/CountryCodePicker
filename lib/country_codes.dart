@@ -55,7 +55,7 @@ List<Map<String, String>> codes = [
     "dial_code": "+54",
   },
   {
-    "name": "Հայաստան",
+    "name": "Armenia",
     "code": "AM",
     "dial_code": "+374",
   },
