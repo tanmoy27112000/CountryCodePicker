@@ -145,42 +145,45 @@ class CountryCodePickerState extends State<CountryCodePicker> {
     else {
       _widget = InkWell(
         onTap: widget.enabled ? showCountryCodePickerDialog : null,
-        child: Container(
-          padding: widget.padding,
-          child: Flex(
-            direction: Axis.horizontal,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              if (widget.showFlagMain != null
-                  ? widget.showFlagMain
-                  : widget.showFlag)
-                Flexible(
-                  flex: widget.alignLeft ? 0 : 1,
-                  fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
-                  child: Padding(
-                    padding: widget.alignLeft
-                        ? const EdgeInsets.only(right: 14.0, left: 8.0)
-                        : const EdgeInsets.only(right: 14.0),
-                    child: Image.asset(
-                      selectedItem.flagUri,
-                      package: 'country_code_picker',
-                      width: widget.flagWidth,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Container(
+            padding: widget.padding,
+            child: Flex(
+              direction: Axis.horizontal,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                if (widget.showFlagMain != null
+                    ? widget.showFlagMain
+                    : widget.showFlag)
+                  Flexible(
+                    flex: widget.alignLeft ? 0 : 1,
+                    fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+                    child: Padding(
+                      padding: widget.alignLeft
+                          ? const EdgeInsets.only(right: 16.0, left: 8.0)
+                          : const EdgeInsets.only(right: 16.0),
+                      child: Image.asset(
+                        selectedItem.flagUri,
+                        package: 'country_code_picker',
+                        width: widget.flagWidth,
+                      ),
                     ),
                   ),
-                ),
-              if (!widget.hideMainText)
-                Flexible(
-                  fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
-                  child: Text(
-                    widget.showOnlyCountryWhenClosed
-                        ? selectedItem.toCountryStringOnly()
-                        : selectedItem.toString(),
-                    style:
-                        widget.textStyle ?? Theme.of(context).textTheme.button,
-                    overflow: widget.textOverflow,
+                if (!widget.hideMainText)
+                  Flexible(
+                    fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+                    child: Text(
+                      widget.showOnlyCountryWhenClosed
+                          ? selectedItem.toCountryStringOnly()
+                          : selectedItem.toString(),
+                      style: widget.textStyle ??
+                          Theme.of(context).textTheme.button,
+                      overflow: widget.textOverflow,
+                    ),
                   ),
-                ),
-            ],
+              ],
+            ),
           ),
         ),
       );
