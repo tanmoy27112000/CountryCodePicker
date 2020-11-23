@@ -143,42 +143,45 @@ class CountryCodePickerState extends State<CountryCodePicker> {
         child: widget.builder(selectedItem),
       );
     else {
-      _widget = FlatButton(
-        padding: widget.padding,
-        onPressed: widget.enabled ? showCountryCodePickerDialog : null,
-        child: Flex(
-          direction: Axis.horizontal,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            if (widget.showFlagMain != null
-                ? widget.showFlagMain
-                : widget.showFlag)
-              Flexible(
-                flex: widget.alignLeft ? 0 : 1,
-                fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
-                child: Padding(
-                  padding: widget.alignLeft
-                      ? const EdgeInsets.only(right: 16.0, left: 8.0)
-                      : const EdgeInsets.only(right: 16.0),
-                  child: Image.asset(
-                    selectedItem.flagUri,
-                    package: 'country_code_picker',
-                    width: widget.flagWidth,
+      _widget = InkWell(
+        onTap: widget.enabled ? showCountryCodePickerDialog : null,
+        child: Container(
+          padding: widget.padding,
+          child: Flex(
+            direction: Axis.horizontal,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              if (widget.showFlagMain != null
+                  ? widget.showFlagMain
+                  : widget.showFlag)
+                Flexible(
+                  flex: widget.alignLeft ? 0 : 1,
+                  fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+                  child: Padding(
+                    padding: widget.alignLeft
+                        ? const EdgeInsets.only(right: 8.0, left: 8.0)
+                        : const EdgeInsets.only(right: 8.0),
+                    child: Image.asset(
+                      selectedItem.flagUri,
+                      package: 'country_code_picker',
+                      width: widget.flagWidth,
+                    ),
                   ),
                 ),
-              ),
-            if (!widget.hideMainText)
-              Flexible(
-                fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
-                child: Text(
-                  widget.showOnlyCountryWhenClosed
-                      ? selectedItem.toCountryStringOnly()
-                      : selectedItem.toString(),
-                  style: widget.textStyle ?? Theme.of(context).textTheme.button,
-                  overflow: widget.textOverflow,
+              if (!widget.hideMainText)
+                Flexible(
+                  fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+                  child: Text(
+                    widget.showOnlyCountryWhenClosed
+                        ? selectedItem.toCountryStringOnly()
+                        : selectedItem.toString(),
+                    style:
+                        widget.textStyle ?? Theme.of(context).textTheme.button,
+                    overflow: widget.textOverflow,
+                  ),
                 ),
-              ),
-          ],
+            ],
+          ),
         ),
       );
     }
@@ -241,7 +244,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
   }
 
   void showCountryCodePickerDialog() {
-    showMaterialModalBottomSheet(
+    showModalBottomSheet(
       barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
       backgroundColor: widget.backgroundColor ?? Colors.transparent,
       context: context,
