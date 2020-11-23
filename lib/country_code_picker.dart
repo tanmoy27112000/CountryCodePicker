@@ -159,8 +159,8 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                   fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
                   child: Padding(
                     padding: widget.alignLeft
-                        ? const EdgeInsets.only(right: 8.0, left: 8.0)
-                        : const EdgeInsets.only(right: 8.0),
+                        ? const EdgeInsets.only(right: 14.0, left: 8.0)
+                        : const EdgeInsets.only(right: 14.0),
                     child: Image.asset(
                       selectedItem.flagUri,
                       package: 'country_code_picker',
@@ -244,7 +244,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
   }
 
   void showCountryCodePickerDialog() {
-    showModalBottomSheet(
+    showMaterialModalBottomSheet(
       barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
       backgroundColor: widget.backgroundColor ?? Colors.transparent,
       context: context,
